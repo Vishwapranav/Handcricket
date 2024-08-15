@@ -1,0 +1,48 @@
+
+.app-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.app-header {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.game-state {
+  margin: 20px;
+}
+
+.toss-button, .choice-button, .switch-button, .reset-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.toss-button:hover, .choice-button:hover, .switch-button:hover, .reset-button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
