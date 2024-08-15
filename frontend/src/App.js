@@ -61,13 +61,16 @@ function App() {
             setGameState('result');
           }
         } else {
-          const newPlayerScore = playerScore + data.finger_count;
-          setPlayerScore(newPlayerScore);
+          setPlayerScore((prevScore) => {
+            const newScore = prevScore + data.finger_count;
 
-          // Check if player score exceeds computer score
-          if (firstInningsOver && newPlayerScore > computerScore) {
-            setGameState('result');
-          }
+            // Check if player score exceeds computer score
+            if (firstInningsOver && newScore > computerScore) {
+              setGameState('result');
+            }
+
+            return newScore;
+          });
         }
       } else {
         if (data.finger_count === randomNum) {
@@ -79,13 +82,16 @@ function App() {
             setGameState('result');
           }
         } else {
-          const newComputerScore = computerScore + randomNum;
-          setComputerScore(newComputerScore);
+          setComputerScore((prevScore) => {
+            const newScore = prevScore + randomNum;
 
-          // Check if computer score exceeds player score
-          if (firstInningsOver && newComputerScore > playerScore) {
-            setGameState('result');
-          }
+            // Check if computer score exceeds player score
+            if (firstInningsOver && newScore > playerScore) {
+              setGameState('result');
+            }
+
+            return newScore;
+          });
         }
       }
     } catch (error) {
